@@ -1,5 +1,5 @@
-import { Admin } from "./systemUser/Admin";
-import AdminProxy from "./systemUser/AdminProxy";
+import { Admin } from "./Admin";
+import AdminProxy from "./AdminProxy";
 
 async function clientCode(): Promise<void> {
   const user = new Admin('Thiago', 'thiagoFH');
