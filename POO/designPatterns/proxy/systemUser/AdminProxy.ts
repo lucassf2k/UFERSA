@@ -4,8 +4,8 @@ export default class AdminProxy implements ISystemUser {
   private realUser: ISystemUser;
   private realUserAddresses: SystemUserAddressType[] | null = null;
 
-  constructor(public admin: ISystemUser) {
-      this.realUser = admin; 
+  constructor(private user: ISystemUser) {
+      this.realUser = user; 
   }
 
    async getAddresses(): Promise<SystemUserAddressType[]> {

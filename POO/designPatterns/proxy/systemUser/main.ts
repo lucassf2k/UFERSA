@@ -2,7 +2,7 @@ import { Admin } from "./Admin";
 import AdminProxy from "./AdminProxy";
 
 async function clientCode(): Promise<void> {
-  const user = new Admin('Thiago', 'thiagoFH');
+  const user = new Admin();
   console.time();
   console.log('Isso vai levar 2 segundos');
   console.log(await user.getAddresses());
@@ -15,7 +15,7 @@ async function clientCode(): Promise<void> {
 }
 
 async function clientCodeProxy(): Promise<void> {
-  const user = new Admin('Lucas', 'lucassf2k');
+  const user = new Admin();
 
   const userProxy  = new AdminProxy(user);
   console.time();
@@ -29,5 +29,5 @@ async function clientCodeProxy(): Promise<void> {
   console.timeEnd();
 }
 
-clientCode();
-// clientCodeProxy();
+// clientCode();
+clientCodeProxy();
